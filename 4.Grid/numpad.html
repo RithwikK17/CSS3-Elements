@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Pad</title>
+<style>
+.numberpad {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberpad button {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberpad button.long {
+    grid-column: 4 / 5;
+    grid-row: 2 / 5;
+    height: 155px;
+}
+
+.numberpad button.enter {
+    grid-column: 4 / 5;
+    grid-row: 5 / 7;
+    height: 105px;
+}
+
+.numberpad button span {
+    font-size: 10px;
+}
+
+.numberpad button:hover {
+    background-color: #e0e0e0;
+}
+</style>
+</head>
+<body>
+
+<div class="numberpad">
+    <button>num lock <span></span></button>
+    <button>/</button>
+    <button>*</button>
+    <button>-</button>
+    <button>7 <span>home</span></button>
+    <button>8 <span>↑</span></button>
+    <button>9 <span>pg up</span></button>
+    <button class="long">+</button>
+    <button>4 <span>←</span></button>
+    <button>5</button>
+    <button>6 <span>→</span></button>
+    <button>1 <span>end</span></button>
+    <button>2 <span>↓</span></button>
+    <button>3 <span>pg dn</span></button>
+    <button class="enter">enter</button>
+    <button class="zero">0 <span>ins</span></button>
+    <button>del</button>
+</div>
+
+</body>
+</html>

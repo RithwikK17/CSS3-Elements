@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ box-sizing: border-box;}
+        body{
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            border-radius: 50%;
+            animation-name: bounce; /* animation name */
+            animation-duration: 5s; /* time to complete one cycle of animation */
+            animation-timing-function: steps(5); /* animation timing function */
+            animation-iteration-count: infinite; /* number of animation cycles */
+            animation-delay: 0s; /* delay function */
+            animation-play-state: running; /* running,paused */
+        }
+        @keyframes bounce{
+            0%{
+                transform: translate(0px,0px);
+                background-color: green;
+            }
+
+            20%{
+                transform: translate(40vh,80vh);
+                background-color: red;
+            }
+
+            60%{
+                transform: translate(80vh,0px);
+                background-color: black;
+            }
+
+            80%{
+                transform: translate(80vw,80vh);
+                background-color: teal;
+            }
+
+            100%{
+                transform: translate(100vw,100px);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> Animation </h1>
+    <button class="play">Play</button>
+    <button class="pause">Pause</button>
+
+    <div class="ball"></div>
+
+    <script>
+        let ballEl =  document.querySelector(".ball")
+        let play = document.getElementById("play")
+        let pause = document.getElementById("pause")
+
+        play.onclick = function(){
+            ballEl.style.animationPlayState = "running";
+        }
+        pause.onclick = function(){
+            ballEl.style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+</html>
