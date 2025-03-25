@@ -1,0 +1,18 @@
+Media Query related to mobile responsive design
+
+1. mobile 320px - 470px
+2. tab 470px - 990px
+    horizontal
+    vertical
+3. notebooks 990px - 1024px
+4. laptops 1024px - 1440px
+5. desktops 1440px - 2560px(4K Resolution)
+
+Properties or factors to be considered
+1. width and height (in px) Resolution
+2. color depth
+3. pixel depth 
+
+orientation
+    - Portrait
+    - Landscape
