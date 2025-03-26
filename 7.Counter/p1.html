@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* for counter to work we need to identify the correct parent of the tag */
+        .container{
+            width: 100%;
+            height: 100%;
+            border: 2px solid grey;
+            padding: 20px;
+            counter-reset: ch;
+        }
+
+        h3::before{
+            counter-increment: ch;
+            content: counter(ch) ". ";
+        }
+
+        h3{
+            counter-reset: tp;
+        }
+
+        h5::before{
+            counter-increment: tp;
+            content: counter(ch) "." counter(tp) " ";
+            padding-left: 2rem;
+        }
+
+        h5{
+            counter-reset: stp;
+        }
+
+        p::before{
+            counter-increment: stp;
+            content: counter(ch) "." counter(tp) "." counter(stp) " ";
+            padding-left: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>HTML</h3>
+            <h5>Header tag</h5>
+                <p>h1-h6</p>
+            <h5>Format tag</h5>
+                <p>bold</p>
+                <p>italic</p>
+                <p>underline</p>
+            <h5>Paragraph tag</h5>
+                <p>p</p>
+            <h5>Table tag</h5>
+                <p>tr table row</p>
+                <p>td table data</p>
+                <p>th table head</p>
+            <h5>List tag</h5>
+                <p>ordered list</p>
+                <p>unordered list</p>
+                <p>description list</p>
+        <h3>CSS</h3>
+            <h5>Selectors</h5>
+                <p>Universal</p>
+                <p>Basic(class/id/tag)</p>
+                <p>Combinators</p>
+                <p>Compound</p>
+                <p>Attribute</p>
+                <p>Psuedo</p>
+            <h5>CSS2</h5>
+                <p>Background</p>
+                <p>Border</p>
+                <p>Color</p>
+            <h5>CSS3</h5>
+                <p>Transform</p>
+                <p>Transition</p>
+                <p>Keyframes</p>
+                <p>Media query</p>
+        <h3>JavaScript</h3>
+            <h5>Basic</h5>
+                <p>variables</p>
+                <p>data types</p>
+                <p>conditional</p>
+                <p>loops</p>
+            <h5>OOJS</h5>
+                <p>objects</p>
+                <p>object methods</p>
+                <p>constructors</p>
+                <p>oops concepts</p>
+            <h5>Ecma Script</h5>
+                <p>spread and rest operators</p>
+                <p>web API</p>
+                <p>promise constructors</p>
+            <h5>Advance JS</h5>
+                <p>Rest API</p>
+        <h3>ReactJS</h3>
+            <h5>Components</h5>
+                <p>functional</p>
+                <p>class</p>
+            <h5>Data binding</h5>
+                <p>variable binding</p>
+                <p>method binding</p>
+    </div>
+</body>
+</html>
