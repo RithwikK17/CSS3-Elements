@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root{
+    --primary:#A5158C;
+    --warning:#EB5B00;
+    --dark:#09122C;
+    --white: #fff;
+
+}
+
+*{
+
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif ;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* common */
+.btn{
+    padding: 12px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    width: 200px;
+}
+
+.btn-group{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.warning{
+    background-color: var(--warning);
+    color: var(--white);
+}
+
+.dark{
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+/* Social icons */
+.social-icons{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1.4rem;
+}
+
+.social-icons .icon-link{
+    text-decoration: none;
+    color: var(--warning);
+    border: 2px solid var(--warning);
+    padding: 4px 6px;
+    margin: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all 0.5s;
+}
+
+.icon-link:hover{ /* icon hover not working */
+    background-color: var(--warning);
+    color: var(--white);
+    
+}
+
+/* Menu Section */
+
+.menu-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px; /* reduced from 80px to 60px */
+    background-color: var(--white);
+    box-shadow: rgba(50,50,93,0.25)0px 50px 100px -20px, rgba(0,0,0,0.3)0px 30px 60px -30px; 
+}
+
+.navbar .menu-container{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a.logo{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.navbar .menu-items a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+    color: var(--dark);
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.menu-items a:hover{
+    color: var(--warning);
+}
+
+.toggler-btn{
+    border: solid var(--dark);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    width: 60px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* home section */
+#home{
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+}
+
+#home .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .container .content,
+#home .container .image{
+    width: 100%;
+}
+
+#home .image img{
+    width: 100%;
+    height: 100%;
+}
+
+#home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.4;
+}
+
+.content .txt{
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.content .name{
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+
+/* about section */
+#about{
+    width: 100%;
+    height: 100vh;
+}
+
+#about .container{
+    padding-top: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img,
+.about-content{
+    width: 100%;
+    padding: 10px;
+}
+
+.about-img img{
+    border-radius: 1rem;
+}
+
+.about-content .card{
+    background-color: var(--white);
+    padding: 5px;
+    color: var(--primary);
+}
+
+.about-content .card:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-content .card:nth-child(2) .list{
+    list-style: none;
+    width: 100%;
+}
+.about-content .card:nth-child(2) .list li{
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Resume Section */
+
+#resume{
+    width: 100%;
+    height: 100%;
+}
+
+#resume .container{
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+}
+
+#resume .title{
+    text-align: center;
+}
+
+#resume .title h3{
+    font-size: 2.2rem;
+    color: var(--warning);
+}
+
+#resume .resume-content{
+    width: 100%;
+}
+
+.resume-content .table-responsive{
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    text-align: center;
+}
+
+table,tr,td,th{
+    border: 2px solid var(--dark);
+    border-collapse: collapse;
+}
+
+.resume-content .skills-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills-list .list{
+    list-style: none;
+    width: 100%;
+}
+
+.skills-list .list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.skills-list .list li .percent{
+    background-color: var(--dark);
+    width: 80%;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.skills-list .list li .percent::before{
+    content: "";
+    background-color: var(--warning);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.list-1 li:nth-child(1) .percent::before{
+    width: 85%;
+}
+
+.list-1 li:nth-child(2) .percent::before{
+    width: 80%;
+}
+
+.list-1 li:nth-child(3) .percent::before{
+    width: 85%;
+}
+
+.list-1 li:nth-child(4) .percent::before{
+    width: 80%;
+}
+
+
+.list-2 li:nth-child(1) .percent::before{
+    width: 85.7%;
+}
+
+.list-2 li:nth-child(2) .percent::before{
+    width: 80.3%;
+}
+
+.list-2 li:nth-child(3) .percent::before{
+    width: 85.4%;
+}
+
+.list-2 li:nth-child(4) .percent::before{
+    width: 80.9%;
+}
