@@ -65,6 +65,10 @@
         align-items: center;
         justify-content: space-around;
     }
+
+    #projects .project-cards{
+        flex-direction: column;
+    }
 }
 
 @keyframes leftSlide{

@@ -90,6 +90,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 .navbar {
@@ -191,7 +192,8 @@ body{
 
 #about .container{
     padding-top: 6rem;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,4 +345,97 @@ table,tr,td,th{
 
 .list-2 li:nth-child(4) .percent::before{
     width: 80.9%;
+}
+
+/* Project section */
+#projects{
+    width: 100%;
+    height: 100%;
+}
+
+#projects .container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    padding: 2rem;
+}
+
+#projects .container .title{
+    text-align: center;
+}
+
+#projects .title h3{
+    font-size: 2.2rem;
+    color: var(--warning);
+}
+
+#projects .project-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-cards .card{
+    margin: 10px;
+}
+
+.project-cards .card .card-img{
+    position: relative;
+
+}
+
+.project-cards .card .card-img img{
+    max-width: 100%;
+}
+
+.project-cards .card .card-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--warning);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.project-cards .card .card-content h4{
+    color: var(--white);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.project-cards .card .card-content .link-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card-content .link-group a{
+    text-decoration: none;
+    color: var(--white);
+    border: 2px solid var(--white);
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.card-content .link-group a:hover{
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.project-cards .card:hover .card-content{
+    opacity: 1;
+    cursor: pointer;
 }
