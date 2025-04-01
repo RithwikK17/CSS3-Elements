@@ -439,3 +439,67 @@ table,tr,td,th{
     opacity: 1;
     cursor: pointer;
 }
+
+/* contact section */
+#contact{
+    width: 100%;
+    height: 100%;
+}
+
+#contact .title{
+    font-size: 3rem;
+    color: var(--warning);
+    text-align: center;
+}
+
+#contact .container{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+#contact .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#contact .map{
+    max-width: 100%;
+    width: 100%;
+}
+
+.map iframe{
+    width: 100%;
+    height: 350px;
+}
+
+#contact .contact-form{
+    max-width: 100%;
+    width: 80%;
+}
+
+.contact-form form .form-group{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: column;
+}
+
+form .form-input{
+    padding: 8px 10px;
+    width: 100%;
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
